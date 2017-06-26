@@ -1,6 +1,6 @@
 Jasmine is a behavior-driven development framework for testing your JavaScript code \[Jasmine\].
 
-This is an IntelliJ IDEA Live Template for the Jasmine JavaScript BDD Framework and Jasmine JQuery extention.
+This is an IntelliJ IDEA Live Template for the Jasmine JavaScript BDD Framework v2.5.
 
 # About
 
