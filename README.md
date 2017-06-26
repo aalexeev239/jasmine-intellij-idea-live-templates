@@ -22,7 +22,7 @@ After each
 
 ``` javascript
 afterEach(() => {  
-	$END$  
+    $END$  
 });
 
 `````
