@@ -21,7 +21,7 @@ After each
 
 
 ``` javascript
-afterEach(function () {  
+afterEach(() => {  
 	$END$  
 });
 
@@ -40,7 +40,7 @@ before each
 
 
 ``` javascript
-beforeEach(function () {  
+beforeEach(() => {  
     $END$      
 });
 ```
@@ -50,7 +50,7 @@ describe jasmine
 
 
 ``` javascript
-describe("$VAL0$", function () {  
+describe('$VAL0$', () => {  
     $END$  
 });
 ```
@@ -87,28 +87,34 @@ expect to match
 expect($VAL0$).toBeFalsy();$END$
 ```
 
+### ehc
+expect have been called
+
+
+``` javascript
+expect($VAL0$).toHaveBeenCalled();$END$
+```
+
+### ehcw
+expect have been called with
+
+
+``` javascript
+expect($VAL0$).toHaveBeenCalledWith($VAL1$);$END$
+```
+
+### em
+expect to match
+
+``` javascript
+expect($VAL0$).toMatch();$END$
+```
+
 ### en
 expect to be null
 
-
 ``` javascript
 expect($VAL0$).toBeNull();$END$
-```
-
-### esc
-expect was called
-
-
-``` javascript
-expect($VAL0$).wasCalled();$END$
-```
-
-### escw
-expect was called with
-
-
-``` javascript
-expect($VAL0$).wasCalledWith($VAL1$);$END$
 ```
 
 ### et
@@ -129,7 +135,7 @@ expect($VAL0$)$END$;
 it
 
 ``` javascript
-it("$VAL0$", function () {  
+it('$VAL0$', () => {  
     $END$  
 });
 ```
@@ -176,18 +182,13 @@ expect not to be null
 expect($VAL0$).not.toBeNull();$END$
 ```
 
-### notsc
-expect was not called
+
+### nohc
+expect have been called
+
 
 ``` javascript
-expect($VAL0$).wasNotCalled();$END$
-```
-
-### notscw
-expect was not called with
-
-``` javascript
-expect($VAL0$).wasNotCalledWith($VAL1$);$END$
+expect($VAL0$).not.toHaveBeenCalled();$END$
 ```
 
 ### nott
@@ -204,101 +205,45 @@ expect not
 expect($VAL0$).not$END$;
 ```
 
-### runs
-runs
-
-``` javascript
-runs(function () {  
-    $END$  
-});
-```
-
 ### s
 spy on
 
 ``` javascript
-spyOn($VAL0$, "$VAL1$")$END$;
+spyOn($VAL0$, '$VAL1$')$END$;
 ```
 
 ### scf
 spy on and call fake
 
 ``` javascript
-spyOn($VAL0$, "$VAL1$").andCallFake($VAL2$);$END$
+spyOn($VAL0$, '$VAL1$').and.callFake($VAL2$);$END$
 ```
 
 ### sct
 spy on and call through
 
 ``` javascript
-spyOn($VAL0$, "$VAL1$").andCallThrough();$END$
+spyOn($VAL0$, '$VAL1$').and.callThrough();$END$
 ```
 
 ### sr
 spy on and return
 
 ``` javascript
-spyOn($VAL0$, "$VAL1$").andReturn($VAL2$);$END$
+spyOn($VAL0$, '$VAL1$').and.returnValue($VAL2$);$END$
 ```
 
 ### st
 spy on and throw
 
 ``` javascript
-spyOn($VAL0$, "$VAL1$").andThrow($VAL2$);$END$
+spyOn($VAL0$, '$VAL1$').and.throwError($VAL2$);$END$
 ```
-
-### wa
-waits
-
-``` javascript
-waits($VAL0$);$END$
-```
-
-## Jasmine-Jquery
-
-### eb
-expect to be
-
-``` javascript
-expect($VAL0$).toBe($VAL1$);$END$
-```
-
-### ebc
-expect to be checked
-
-``` javascript
-expect($VAL0$).toBeChecked();$END$
-```
-
-### lf
-load fixutre
-
-``` javascript
-loadFixtures($VAL0$);$END$
-```
-
-### rf
-read fixture
-
-``` javascript
-readFixture($VAL0$);$END$
-```
-
-### sf
-set fixture
-
-``` javascript
-setFixture($VAL0$);$END$
-```
-
 
 
 # More
 
  * \[1\][Jasmine](http://github.com/pivotal/jasmine)
- * \[2\][Jasmine Text Mate bundle](https://github.com/pivotal/jasmine-tmbundle)
- * \[3\][Jasmine JQuery](https://github.com/velesin/jasmine-jquery)
 
 
 # Live Template Installation
